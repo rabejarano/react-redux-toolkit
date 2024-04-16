@@ -296,6 +296,44 @@ Así es como se ve visualmente ese flujo de datos:
 ![redux](https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif)
 
 
+## Un Poco de Historia
+
+### Flux 
+
+En el año 2013, Facebook presentó al mundo Flux, una arquitectura para el manejo de estado en aplicaciones JavaScript. Su objetivo era abordar las limitaciones de las arquitecturas tradicionales como MVC, que a menudo resultaban complejas y difíciles de mantener en aplicaciones web a gran escala.
+
+Flux introdujo tres elementos clave:
+
+* **Dispatcher:** Un punto central para recibir acciones de los componentes.
+* **Store:** Un almacén centralizado del estado de la aplicación.
+* **View:** Componentes React que renderizan la interfaz de usuario en función del estado actual.
+
+El flujo de datos en Flux era unidireccional: las acciones se enviaban al dispatcher, este las actualizaba en el store, y los componentes se re-renderizaban automáticamente para reflejar el nuevo estado.
+
+Las motivaciones detrás de Flux:
+
+* Simplicidad: Buscaba una arquitectura más simple y clara que MVC, facilitando la comprensión y el mantenimiento de aplicaciones complejas.
+* Predictibilidad: El flujo de datos unidireccional hacía que el comportamiento de la aplicación fuera más predecible y fácil de depurar.
+* Escalabilidad: Permitía manejar el estado de forma eficiente en aplicaciones con múltiples componentes y usuarios concurrentes.
+* Reusabilidad: Facilitaba la creación de componentes reutilizables que no dependían directamente del estado global.
+
+### Redux: La evolución de Flux
+
+En 2014, Dan Abramov, un ingeniero de software de Facebook, introdujo Redux, una biblioteca inspirada en Flux pero con un enfoque más minimalista y robusto. Redux conservaba los principios fundamentales de Flux pero los refinaba y simplificaba:
+
+* **only one store**: En lugar de múltiples stores, Redux centraliza todo el estado de la aplicación en un único almacén.
+* **pure Actions:** Las acciones en Redux son simples objetos que describen el evento ocurrido, sin lógica de negocio.
+* **pure Reducers:** Los reducers son funciones puras que determinan el nuevo estado en base al estado actual y la acción recibida.
+* **Middleware:** Se introduce el concepto de middleware, permitiendo interceptar y modificar las acciones antes de que lleguen al reducer.
+
+### ¿Por qué Redux? Las ventajas sobre Flux:
+
+* Simplicidad extrema: Redux tiene una API más simple y concisa que Flux, facilitando su aprendizaje y uso.
+* Herramientas de desarrollo: Redux cuenta con un ecosistema de herramientas de desarrollo robustas que facilitan la depuración y el análisis del estado.
+* Comunidad vibrante: Redux tiene una comunidad grande y activa que ofrece apoyo y recursos valiosos.
+* Escalabilidad comprobada: Redux ha sido utilizado con éxito en aplicaciones a gran escala de empresas como Netflix, Airbnb y PayPal.
+
+
 ## Recursos de Referencia
 
 * [Redux Essentials, Part 1: Redux Overview and Concepts](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
