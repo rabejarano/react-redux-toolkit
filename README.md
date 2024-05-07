@@ -334,8 +334,19 @@ En 2014, Dan Abramov, un ingeniero de software de Facebook, introdujo Redux, una
 * Escalabilidad comprobada: Redux ha sido utilizado con éxito en aplicaciones a gran escala de empresas como Netflix, Airbnb y PayPal.
 
 
+### Redux-thunk
+
+Thunk es un Middleware para Redux. Permite escribir funciones con lógica interna que pueden interactuar con los actions y getState de un store Redux.
+Con un Stroe Redux básica, solo puedes realizar actualizaciones sincrónicas simples enviando una action. El middleware amplía las capacidades del store y permita 
+escribir lógica asíncrona que interactúa con el store.
+
+Así es como se ve visualmente ese flujo de datos:
+
+![redux-thunk](https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif)
+
 ## Recursos de Referencia
 
 * [Redux Essentials, Part 1: Redux Overview and Concepts](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
 * [Redux Essentials, Part 2: Redux Toolkit App Structure](https://redux.js.org/tutorials/essentials/part-2-app-structure)
 * [Redux Toolkit Quick Start](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+* [redux-thunk](https://github.com/reduxjs/redux-thunk)
